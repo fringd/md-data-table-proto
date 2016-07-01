@@ -213,10 +213,8 @@ export class MdTable implements AfterContentInit,
     let windowHeight = this.scroller.clientHeight - this.rowHeight;
     let fixedPoint = Math.floor(this.offsetPx + (this.offsetPx / (totalHeight - windowHeight - this.rowHeight)) * windowHeight);
     let fixedRow = Math.floor(fixedPoint / this.rowHeight);
-    console.log('fixedRow', fixedRow);
     let offScreenPx = Math.floor(fixedPoint % this.rowHeight);
     let fixedRenderedIndex = fixedRow-firstRendered;
-    console.log('fixedRenderedIndex', fixedRenderedIndex);
     let renderedRows = tbody.getElementsByTagName('tr');
     let topHeight = 0;
     for (let i = 0; i < fixedRenderedIndex; i++ ) {
